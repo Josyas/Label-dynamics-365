@@ -1,4 +1,4 @@
-# Label-dynamics-365
+# Label dynamics 365 finance and operations
 
 ![Capture](https://user-images.githubusercontent.com/87546094/138570514-b36c4b6a-dba5-4583-b994-895b868155a2.JPG)
 
