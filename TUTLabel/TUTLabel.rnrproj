@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>Produto Cliente</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <ProjectGuid>{c556739f-f7f4-4a5c-b362-1ffeb673aeca}</ProjectGuid>
+    <Name>TUTLabel</Name>
+    <RootNamespace>TUTLabel</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxForm\TUTCustomer">
+      <SubType>Content</SubType>
+      <Name>TUTCustomer</Name>
+      <Link>Forms\TUTCustomer</Link>
+    </Content>
+    <Content Include="AxLabelFile\TUTCustomer_en-US">
+      <SubType>Content</SubType>
+      <Name>TUTCustomer_en-US</Name>
+      <Link>Label Files\TUTCustomer_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\TUTCustomer_pt-BR">
+      <SubType>Content</SubType>
+      <Name>TUTCustomer_pt-BR</Name>
+      <Link>Label Files\TUTCustomer_pt-BR</Link>
+    </Content>
+    <Content Include="TUTCustomer.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>TUTCustomer.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\TUTCustomer_en-US</DependentUpon>
+    </Content>
+    <Content Include="TUTCustomer.pt-BR.label.txt">
+      <SubType>Content</SubType>
+      <Name>TUTCustomer.pt-BR.label.txt</Name>
+      <DependentUpon>AxLabelFile\TUTCustomer_pt-BR</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
